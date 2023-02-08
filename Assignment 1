@@ -1,0 +1,5 @@
+docker --version
+ls
+cd website
+docker run -d --rm --name apache-example-01 -p 80:80 -v ${pwd}/project:/usr/local/apache2/htdocs httpd
+docker run -d --rm --name apache-example-02 -p 82:80 -v ${pwd}/project:/usr/local/apache2/htdocs httpd:2.4
